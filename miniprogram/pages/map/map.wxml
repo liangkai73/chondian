@@ -1,0 +1,16 @@
+<!--pages/map/map.wxml-->
+<view class="container">
+    <map name="map1" id='map1' show-location="true" markers="{{markers}}" class="map-bg" latitude="{{latitude}}" longitude="{{longitude}}">
+        <cover-view slot="callout" class="marker-slot">
+            <cover-view marker-id="1" style="height: 40px">
+                <cover-view class="flex_r_s marker-box">
+                    <cover-view> 快10/慢10</cover-view>
+                </cover-view>
+                <!-- <cover-view class="marker-node"></cover-view> -->
+            </cover-view>
+        </cover-view>
+        <cover-view class="foot-bar">
+            <button bindtap="addMarker"  type="primary">添加marker</button>
+        </cover-view>
+    </map>
+</view>
