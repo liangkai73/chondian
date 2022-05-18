@@ -1,16 +1,74 @@
 <!--pages/map/map.wxml-->
-<view class="container">
-    <map name="map1" id='map1' show-location="true" markers="{{markers}}" class="map-bg" latitude="{{latitude}}" longitude="{{longitude}}">
+<view class="container index-map1">
+    <map id='map1' show-location="true" markers="{{markers}}" class="map-bg" latitude="{{latitude}}" longitude="{{longitude}}" show-compass="true" bindmarkertap="choseTap" bindcallouttap="choseTap">
         <cover-view slot="callout" class="marker-slot">
-            <cover-view marker-id="1" style="height: 40px">
-                <cover-view class="flex_r_s marker-box">
-                    <cover-view> 快10/慢10</cover-view>
+            <block wx:for="{{markers}}" wx:key="id">
+                <cover-view marker-id="{{item.id}}" class="callout-inner {{item.id==activeMarkerId&&'callout-active'}}">
+                    <cover-view class="flex_r_s marker-box">
+                        <cover-image class="marker-box-icon" src="/assets/charge-fast.png"></cover-image>
+                        <cover-view class="marker-box-inner"> 快{{item.fast}}/慢{{item.low}}</cover-view>
+                    </cover-view>
+                    <cover-view class="marker-node"></cover-view>
                 </cover-view>
-                <!-- <cover-view class="marker-node"></cover-view> -->
-            </cover-view>
+            </block>
         </cover-view>
-        <cover-view class="foot-bar">
-            <button bindtap="addMarker"  type="primary">添加marker</button>
+        <!-- right-tools -->
+        <cover-view class='right-tools flex_c'>
+            <cover-view class="iconfont icon-location" />
+            <cover-view class="iconfont icon-filter" />
+            <cover-view class="iconfont icon-search" />
+
+        </cover-view>
+        <!-- foot-bar -->
+        <cover-view class="foot-bar flex_r_s" wx:if="{{pageType == 1}}">
+            <cover-view class="active-font">首页</cover-view>
+            <button class="button-y">扫码充电</button>
+            <cover-view>我的</cover-view>
         </cover-view>
     </map>
+
+    <swiper class="index-map1-swiper" previous-margin="40rpx" next-margin="40rpx" wx:if="{{pageType == 2}}">
+        <block wx:for="{{stationList}}" wx:key="*this">
+            <swiper-item>
+                <view class="map1-swiper-item">
+                    <view class="swiper-box">
+                        <view class="swiper-box-inner flex_c_n">
+                            <view class="inner-body flex_r_s flex1">
+                                <image src="/assets/images-2.png"></image>
+                                <view class="flex1 flex_c_n" style="padding-left: 5px;height: 100px">
+                                    <view class="flex_r_s flex1">
+                                        <view class="flex1 flex_c_n" style="height: 100%;">
+                                            <text class="t-name">仓山区橘园洲充电桩</text>
+                                            <view class="flex1"></view>
+                                            <text class="t-desc">福建省福州市区洪武路</text>
+                                        </view>
+                                        <cover-view class="iconfont icon-search" />
+                                    </view>
+                                    <text style="font-size: 12px;">500米</text>
+                                    <view class="price-box flex_r_s">
+                                        <text class="price-text">1.50</text>
+                                        <text>元/度</text>
+                                        <text class="flex1"></text>
+                                        <view class="price-right flex_r_s">
+                                            <image src="/assets/charge-fast.png"></image>
+                                            快20/慢10
+                                        </view>
+                                    </view>
+                                </view>
+                            </view>
+                            <view class="inner-marks flex_r_s">
+                                <view class="mark-t flex_r">限时免费停车</view>
+                            </view>
+                            <view class="inner-botton flex_r_c">
+                                <button class="flex_r">导航</button>
+                                <view style="width: 10px;"></view>
+                                <button  class="flex_r" style="background: #FFD428;">扫码充电</button>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </swiper-item>
+        </block>
+    </swiper>
+
 </view>

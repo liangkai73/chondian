@@ -1,16 +1,34 @@
 // pages/map/map.ts
-let markers = [
-    {
+let markers = [{
         id: 1,
         latitude: 26.15061,
         longitude: 119.13199,
         iconPath: '/assets/marker_down.png',
-        height: "40",
+        height: 30,
+        width: 8,
+        fast: 8,
+        low: 5,
         customCallout: {
             anchorY: 0,
             anchorX: 0,
             display: 'ALWAYS'
-        },
+        }
+    },
+    {
+        id: 2,
+        latitude: 26.15161,
+        longitude: 119.13399,
+        iconPath: '/assets/marker_down.png',
+        height: 30,
+        width: 8,
+        fast: 10,
+        low: 7,
+        customCallout: {
+            anchorY: 0,
+            anchorX: 0,
+            display: 'ALWAYS'
+
+        }
     }
 ]
 
@@ -23,6 +41,9 @@ Page({
         latitude: 1,
         longitude: 1,
         markers: [],
+        activeMarkerId: NaN,
+        pageType: 2, // 1 foot 2 swiper 
+        stationList: [],
 
     },
 
@@ -30,14 +51,6 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad() {
-
-
-    },
-
-    /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
-    onReady() {
         this.mapCtx = wx.createMapContext('myMap')
         wx.getLocation({
             type: 'wgs84',
@@ -46,10 +59,65 @@ Page({
                 console.log(res)
                 this.data.latitude = res.latitude;
                 this.data.longitude = res.longitude;
-                this.setData({ latitude: res.latitude, longitude: res.longitude });
-                console.log(this)
+                this.setData({
+                    latitude: res.latitude,
+                    longitude: res.longitude
+                });
+                // 获取站点
+                this.getMarkerist();
+                this.getStationList()
             }
         })
+
+
+    },
+
+    /**
+     * 生命周期函数--监听页面初次渲染完成
+     */
+    onReady() {
+
+    },
+    // 获取标记点
+    getMarkerist() {
+        this.setData({
+            markers: markers
+        })
+    },
+    // 获取站点列表
+    getStationList() {
+        let list = [{
+                id: 1,
+                name: '仓山区橘园洲站充电站',
+                desc: '福建省福州市仓山区红网路',
+                distance: '500米',
+                fast: 10,
+                low: 8,
+                price: 1.5000,
+                mark: ['限时免费停车', '休息室']
+            },
+            {
+                id: 2,
+                name: '仓山区橘园洲站充电站',
+                desc: '福建省福州市仓山区红网路',
+                distance: '500米',
+                fast: 10,
+                low: 8,
+                price: 1.5000,
+                mark: ['限时免费停车', '休息室']
+            }
+        ]
+        this.setData({
+            stationList: list
+        })
+    },
+    // 选择地点
+    choseTap(e) {
+        console.log(e)
+        this.setData({
+            activeMarkerId: e.markerId
+        })
+        console.log
     },
 
     /**
@@ -73,9 +141,7 @@ Page({
 
     },
     addMarker() {
-        this.setData({
-            markers: markers
-        })
+
     },
     /**
      * 页面相关事件处理函数--监听用户下拉动作
