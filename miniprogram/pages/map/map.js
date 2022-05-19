@@ -42,8 +42,10 @@ Page({
         longitude: 1,
         markers: [],
         activeMarkerId: NaN,
-        pageType: 2, // 1 foot 2 swiper 
+        pageType: 1, // 1 foot 2 swiper 
         stationList: [],
+        toolsHeight: "100px",
+        show: true,
 
     },
 
@@ -115,9 +117,27 @@ Page({
     choseTap(e) {
         console.log(e)
         this.setData({
-            activeMarkerId: e.markerId
+            activeMarkerId: e.markerId,
+            pageType: 2,
+            toolsHeight: "300px"
         })
         console.log
+    },
+    // 切换地点swiper
+    changeSwiper(e, s) {
+        this.setData({
+            activeMarkerId: e.detail.currentItemId
+        });
+        // 定位到该地点
+        const activeMarker = this.data.markers.filter(e => {
+            return e.id == this.data.activeMarkerId;
+        })[0]
+
+        this.setData({
+            latitude: activeMarker.latitude,
+            longitude: activeMarker.longitude,
+        });
+
     },
 
     /**
