@@ -288,6 +288,10 @@
   padding: 6px 20px;
   box-sizing: border-box;
   border: none;
+
+  &::after {
+    border: none !important;
+  }
 }
 
 .btn-big {
@@ -305,6 +309,10 @@
   box-sizing: border-box;
   border: none;
 
+  &::after {
+    border: none !important;
+  }
+
 }
 
 .btn-mark {
@@ -315,6 +323,10 @@
   border-radius: 12px;
   font-size: 12px;
   width: inherit;
+
+  ::after {
+    border: none !important;
+  }
 }
 
 .btn-mark-full {
@@ -326,6 +338,10 @@
   border-radius: 12px;
   font-size: 12px;
   width: inherit;
+
+  &::after {
+    border: none !important;
+  }
 }
 
 // transition

@@ -1,2 +1,36 @@
 <!--pages/station/equipment/equipment.wxml-->
-<text>pages/station/equipment/equipment.wxml</text>
+<view class="container">
+  <view class="flex_r_s mt15">
+    <button class="btn-primary" style="width: 180rpx;"> 空闲(25)</button>
+    <button class="btn-ccc" style="width: 180rpx;"> 快充(20)</button>
+    <button class="btn-ccc" style="width: 180rpx;"> 慢充(10)</button>
+  </view>
+  <view class="mt25"></view>
+  <block wx:for="[1,1,1]" wx:key="*this">
+    <view class="flex_r_s" style="padding:0 15rpx;">
+      <view class="flex_c" style="margin:0 15px;">
+        <view class="station-item-icon flex_r">
+          <van-icon class-prefix="iconfont" name="charging-pile" size="28px" style="color: #fff;" />
+        </view>
+        <text class="font12 mt5">空闲</text>
+      </view>
+      <view class="flex1 flex_c_n">
+        <view>
+          <text class="font16 bold">#1 直流快充</text>
+          <text class="font14">(5263567487)</text>
+        </view>
+        <view class="font14 mt5">
+          <text>30kw</text>
+          <text>705v</text>
+          <text>国标2015</text>
+        </view>
+        <view class="font14">
+          <text>车位号:</text>
+          <text>B2层C301</text>
+        </view>
+      </view>
+    </view>
+    <van-divider />
+  </block>
+
+</view>
