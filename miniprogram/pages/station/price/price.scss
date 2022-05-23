@@ -1,0 +1,13 @@
+/* pages/station/price/price.wxss */
+.station_price {
+  height: 70px;
+  padding: 0 20rpx;
+
+  .van-divider {
+    margin: 0 !important;
+  }
+}
+
+.active_price {
+  background: #fef6d8;
+}

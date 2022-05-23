@@ -1,0 +1,23 @@
+<!--pages/station/price/price.wxml-->
+<view class="container">
+  <view class="station_price {{index ==3 &&'active_price'}}" wx:for="{{5}}" wx:key="index">
+    <view class="flex_r_s" style="height: 100%;">
+      <text style="width: 240rpx;">0.00- 06.591</text>
+      <view class="flex_c_n flex1">
+        <view class="flex_r_s">
+          <text class="price-text">1.500 </text>
+          <text class="font14">元/度</text>
+          <text wx:if="{{index ==3}}" class="btn-mark-full" style="margin-left: 10rpx;">当前段</text>
+        </view>
+        <view class="font12 ccc-text mt5">
+          <text>电费：</text>
+          <text>1.30</text>
+          <text>元/度，服务费</text>
+          <text>0.2</text>
+          <text>元/度</text>
+        </view>
+      </view>
+    </view>
+    <van-divider style="margin:0;" />
+  </view>
+</view>

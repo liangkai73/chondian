@@ -1,202 +1,222 @@
 /* pages/map/map.wxss */
 
 index-map1 {
-    position: relative;
+  position: relative;
 }
 
 .map-bg {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 .marker-slot {
-    position: relative;
+  position: relative;
 }
 
 .callout-inner {
-    position: relative !important;
+  position: relative !important;
 }
 
 .marker-box {
-    padding: 0px 10px 0 5px;
-    border-radius: 15px;
-    box-sizing: border-box !important;
-    width: auto !important;
-    height: 36px;
-    font-size: 14px;
-    color: #000;
-    background: #FDFEFF;
-    box-shadow: 0px 1px 2px 0px rgba(10, 36, 99, 0.24), 0px 0px 8px 0px rgba(10, 36, 99, 0.08);
+  padding: 0px 10px 0 5px;
+  border-radius: 15px;
+  box-sizing: border-box !important;
+  width: auto !important;
+  height: 36px;
+  font-size: 14px;
+  color: #000;
+  background: #FDFEFF;
+  box-shadow: 0px 1px 2px 0px rgba(10, 36, 99, 0.24), 0px 0px 8px 0px rgba(10, 36, 99, 0.08);
 
-    .marker-box-icon {
-        height: 24px !important;
-        width: 24px !important;
-        margin-right: 5px;
-    }
+  .marker-box-icon {
+    height: 24px !important;
+    width: 24px !important;
+    margin-right: 5px;
+  }
 
-    .marker-box-inner {
-        min-width: 70px !important;
-    }
+  .marker-box-inner {
+    min-width: 70px !important;
+  }
 }
 
 .callout-active {
-    .marker-box {
-        background: #FFCD00;
-    }
+  .marker-box {
+    background: #FFCD00;
+  }
 
-    .marker-node {
-        background: #FFCD00;
-    }
+  .marker-node {
+    background: #FFCD00;
+  }
 }
 
 .marker-node {
-    width: 10px;
-    height: 10px;
-    background: #fff;
-    position: absolute !important;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: -32px;
-    margin: auto;
-    transform: rotate(45deg);
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  position: absolute !important;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: -32px;
+  margin: auto;
+  transform: rotate(45deg);
 
 }
 
 .right-tools {
-    position: absolute;
-    right: 10px;
-    bottom: 100px;
-    width: 46px;
-    height: 150px;
+  position: absolute;
+  right: 10px;
+  bottom: 100px;
+  width: 46px;
+  height: 150px;
 
 
-    .iconfont {
-        font-size: 24px !important;
-        background: #fff;
-        padding: 5px;
-        margin: 5px;
-        border-radius: 6px;
-        box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.15);
-    }
+  .iconfont {
+    font-size: 24px !important;
+    background: #fff;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 6px;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.15);
+  }
 }
 
 .foot-bar {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 90px;
-    width: 100%;
-    box-sizing: border-box;
-    background: #fff;
-    padding: 0 40px;
-    color: #000;
-    font-size: 16px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 90px;
+  width: 100%;
+  box-sizing: border-box;
+  background: #fff;
+  padding: 0 40px;
+  color: #000;
+  font-size: 16px;
 }
 
 .button-y {
-    box-sizing: border-box;
-    width: 120px !important;
-    height: 36px;
-    border-radius: 18px;
-    background: #FFCD00;
-    font-size: 16px;
+  box-sizing: border-box;
+  width: 120px !important;
+  height: 36px;
+  border-radius: 18px;
+  background: #FFCD00;
+  font-size: 16px;
 }
 
 .active-font {
-    color: #FF8900;
+  color: #FF8900;
 }
 
 .index-map1-swiper {
-    position: absolute;
-    bottom: 80px;
-    left: 0;
-    width: 100%;
-    height: 210px;
-    overflow-x: inherit !important;
-    // background: #fff;
+  position: absolute;
+  bottom: 80px;
+  left: 0;
+  width: 100%;
+  height: 210px;
+  overflow-x: inherit !important;
+  // background: #fff;
 }
 
 .map1-swiper-item {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
+}
 
-    .swiper-box {
-        width: 100%;
-        height: 100%;
-        padding: 8px;
-        box-sizing: border-box;
+.swiper-box {
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.swiper-box-inner {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 10px;
+  box-shadow: 0px 8px 12px 0px rgba(41, 51, 64, 0.2), 0px 1px 2px 0px rgba(208, 208, 208, 0.5);
+  color: #242E42;
+
+  image {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    margin-right: 5px;
+  }
+
+  .t-name {
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .t-desc {
+    font-size: 12px;
+  }
+
+  .price-box {
+    font-size: 12px;
+  }
+
+  .price-text {
+    font-size: 16px !important;
+    font-weight: bold;
+    color: #FF8900 !important;
+  }
+
+  .price-right {
+    // width: 110px;
+    padding: 2px 5px;
+    background: #EEF2F5;
+    border-radius: 16px;
+
+    image {
+      width: 24px;
+      height: 24px;
     }
+  }
 
-    .swiper-box-inner {
-        width: 100%;
-        height: 100%;
-        box-sizing: border-box;
-        background-color: #fff;
-        border-radius: 16px;
-        padding: 10px;
-        box-shadow: 0px 8px 12px 0px rgba(41, 51, 64, 0.2), 0px 1px 2px 0px rgba(208, 208, 208, 0.5);
-        color: #242E42;
+  .inner-marks {
+    margin: 5px 0;
+    box-sizing: border-box;
+  }
 
-        image {
-            width: 100px;
-            height: 100px;
-            border-radius: 8px;
-            box-sizing: border-box;
-            margin-right: 5px;
-        }
+  .mark-t {
+    height: 20px;
+    padding: 0 6px;
+    margin-right: 10px;
+    border: 1px solid #FF9F08;
+    color: #FF9F08;
+    border-radius: 12px;
+    font-size: 12px;
+    width: inherit;
+  }
 
-        .t-name {
-            font-weight: bold;
-            font-size: 16px;
-        }
+  button {
+    height: 40px;
+    border-radius: 20px;
+    font-size: 14px;
+  }
+}
 
-        .t-desc {
-            font-size: 12px;
-        }
+.inner-search {
+  position: absolute;
+  left: 0;
+  top: 30px;
+  width: 100%;
+}
 
-        .price-box {
-            font-size: 12px;
-        }
+.popup-inner {
+  height: 100%;
+  background: #F6F7F8;
+  box-sizing: border-box;
+  overflow: auto;
+  padding: 65px 10px 0 10px;
+}
 
-        .price-text {
-            font-size: 16px !important;
-            font-weight: bold;
-            color: #FF8900 !important;
-        }
-
-        .price-right {
-            // width: 110px;
-            padding: 2px 5px;
-            background: #EEF2F5;
-            border-radius: 16px;
-
-            image {
-                width: 24px;
-                height: 24px;
-            }
-        }
-
-        .inner-marks {
-            margin: 5px 0;
-            box-sizing: border-box;
-        }
-
-        .mark-t {
-            height: 20px;
-            padding: 0 6px;
-            margin-right: 10px;
-            border: 1px solid #FF9F08;
-            color: #FF9F08;
-            border-radius: 12px;
-            font-size: 12px;
-            width: inherit;
-        }
-
-        button {
-            height: 40px;
-            border-radius: 20px;
-            font-size: 14px;
-        }
-    }
+.popup-inner-item {
+  width: 100%;
+  height: 200px;
 }

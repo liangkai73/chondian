@@ -1,0 +1,4 @@
+<!--pages/component/star/star.wxml-->
+<view class=" flex_r_s" style="display: inline-block;">
+  <van-icon wx:for="{{arr}}" wx:key="index" class-prefix="iconfont" name="star-fill" size="12px" style="color: #eb535a;" />
+</view>

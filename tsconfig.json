@@ -28,7 +28,7 @@
   },
   "include": [
     "./**/*.ts"
-, "miniprogram/pages/map/map.ts"  ],
+, "miniprogram/pages/map/map.ts", "miniprogram/pages/component/star/star.js", "miniprogram/pages/station/station.js", "miniprogram/pages/station.js"  ],
   "exclude": [
     "node_modules"
   ]

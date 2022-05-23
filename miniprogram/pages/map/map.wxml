@@ -16,7 +16,7 @@
     <cover-view class='right-tools flex_c' style="bottom:{{toolsHeight}}">
       <cover-view class="iconfont icon-location" />
       <cover-view class="iconfont icon-filter" />
-      <cover-view class="iconfont icon-search" />
+      <cover-view class="iconfont icon-search" bind:tap="openPopup" />
     </cover-view>
     <!-- foot-bar -->
     <cover-view class="foot-bar flex_r_s" wx:if="{{pageType == 1}}">
@@ -70,6 +70,53 @@
     </block>
   </swiper>
   <!-- popup  搜索-->
-  <van-popup show="{{ show }}" position="bottom">内容</van-popup>
+  <van-popup show="{{ popupShow }}" bind:close="onClosePopup" closeable round custom-style="height: 90%;padding:30px 0 0 0" position="bottom">
+    <van-search class="inner-search" shape='round' value="{{ filterMarkerStr }}" placeholder="请输入搜索关键词" background='#ffffff' />
+    <view class="popup-inner">
+      <view class="flex_r_s">
+        <text>推荐</text>
+        <text class="flex1"></text>
+      </view>
+
+      <view class="popup-inner-item mt10" data-markerId="{{item.id}}" wx:for="{{stationList}}" wx:key="*this">
+        <view class="swiper-box-inner flex_c_n">
+          <view class="inner-body flex_r_s flex1">
+            <image src="/assets/images-2.png"></image>
+            <view class="flex1 flex_c_n" style="padding-left: 5px;height: 100px">
+              <view class="flex_r_s flex1">
+                <view class="flex1 flex_c_n" style="height: 100%;">
+                  <text class="t-name">仓山区橘园洲充电桩</text>
+                  <view class="flex1"></view>
+                  <text class="t-desc">福建省福州市区洪武路</text>
+                </view>
+                <cover-view class="iconfont icon-search" />
+              </view>
+              <text style="font-size: 12px;">500米</text>
+              <view class="price-box flex_r_s">
+                <text class="price-text">1.50</text>
+                <text>元/度</text>
+                <text class="flex1"></text>
+                <view class="price-right flex_r_s">
+                  <image src="/assets/charge-fast.png"></image>
+                  快20/慢10
+                </view>
+              </view>
+            </view>
+          </view>
+          <view class="inner-marks flex_r_s">
+            <view class="mark-t flex_r">限时免费停车</view>
+          </view>
+          <view class="inner-botton flex_r_c">
+            <button class="flex_r">导航</button>
+            <view style="width: 10px;"></view>
+            <button class="flex_r" style="background: #FFD428;">扫码充电</button>
+          </view>
+        </view>
+      </view>
+    </view>
+
+
+
+  </van-popup>
 
 </view>

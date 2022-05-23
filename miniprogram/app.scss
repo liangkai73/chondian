@@ -1,10 +1,11 @@
 /**app.wxss**/
 @import './styles/icon.wxss';
+@import './miniprogram_npm/@vant/weapp/common/index.wxss';
 
 .container {
   height: 100vh;
   width: 100%;
-  background: #ccc;
+  background: #fff;
 }
 
 // flex布局常用类
@@ -162,6 +163,10 @@
   font-size: 32px !important;
 }
 
+.bold {
+  font-weight: bold !important;
+}
+
 //常用margin
 .mt1 {
   margin-top: 1px;
@@ -247,7 +252,81 @@
   text-align: right;
 }
 
-// 字体颜色
+.card_round {
+  background: #FFFFFF;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 15px;
+  color: #242E42;
+}
+
+.card_round_nopad {
+  background: #FFFFFF;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 15px 0;
+  color: #242E42;
+}
+
+.price-text {
+  font-size: 18px !important;
+  font-weight: bold;
+  color: #FF8900 !important;
+}
+
+.ccc-text {
+  color: #999999 !important;
+}
+
+// button
+.btn-primary {
+  background: #FFD428;
+  color: #242E42;
+  font-size: 14px;
+  line-height: 20px;
+  border-radius: 16px;
+  padding: 6px 20px;
+  box-sizing: border-box;
+  border: none;
+}
+
+.btn-big {
+  padding: 10px 25px !important;
+  border-radius: 24px !important;
+}
+
+.btn-ccc {
+  background: #F5F6F7;
+  color: #242E42;
+  font-size: 14px;
+  line-height: 20px;
+  border-radius: 16px;
+  padding: 6px 20px;
+  box-sizing: border-box;
+  border: none;
+
+}
+
+.btn-mark {
+  padding: 3px 6px;
+  margin-right: 10px;
+  border: 1px solid #FF9F08;
+  color: #FF9F08;
+  border-radius: 12px;
+  font-size: 12px;
+  width: inherit;
+}
+
+.btn-mark-full {
+  padding: 3px 6px;
+  margin-right: 10px;
+  background: #FF8900;
+  // border: 1px solid #FF9F08;
+  color: #fff;
+  border-radius: 12px;
+  font-size: 12px;
+  width: inherit;
+}
 
 // transition
 //点击波纹效果

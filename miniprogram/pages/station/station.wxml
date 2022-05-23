@@ -1,0 +1,158 @@
+<!--pages/station/station.wxml-->
+<view class="container station-container">
+  <view class="station-head">
+    <swiper class="head-swiper" indicator-dots="{{indicatorDots}}" indicator-active-color="#FFD428" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{stationImg}}" wx:key="*this">
+        <swiper-item>
+          <view class="head-swiper-item" style="background-image: url({{item.url}});">
+
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="swiper-icon-star">
+      <van-icon class-prefix="iconfont" name="star" size="24px" style="color: #fff;" />
+    </view>
+  </view>
+  <view class="station-body">
+    <view class="body-top card_round flex_r_s">
+      <view class="flex1 flex_c_n" style="height: 100%;">
+        <text class="font16 bold mt5">福州五四北泰和广场充电桩</text>
+        <text class="font14 mt5">福建省福州市晋安区坂中路6号地下停车场负2层</text>
+        <text class="font12 mt5">500米</text>
+        <view class="flex1"></view>
+        <view class="flex_r_s">
+          <view class="btn-mark">
+            限时免费停车
+          </view>
+        </view>
+
+      </view>
+
+      <button class="btn-primary" style="margin-left:20px;margin-top: -30px;">导航</button>
+    </view>
+    <!-- 充电桩详情 -->
+    <view class="body-mid1 card_round_nopad mt10">
+      <view class="flex_r_s font12" style="padding: 0 15px;">
+        <text class="price-text">1.50</text>
+        <text>元/度</text>
+        <text class="btn-mark-full" style="margin-left: 5px;">当前段</text>
+        <text class="flex1"></text>
+        <text>价格详情 ></text>
+
+      </view>
+      <van-divider />
+      <view class="flex_r_s">
+        <button class="btn-primary" style="width: 180rpx;"> 空闲(25)</button>
+        <button class="btn-ccc" style="width: 180rpx;"> 快充(20)</button>
+        <button class="btn-ccc" style="width: 180rpx;"> 慢充(10)</button>
+      </view>
+      <!-- body-station-item -->
+      <view class="mt15"></view>
+      <block wx:for="[1,1,1]" wx:key="*this">
+        <view class="flex_r_s">
+          <view class="flex_c" style="margin:0 15px;">
+            <view class="station-item-icon flex_r">
+              <van-icon class-prefix="iconfont" name="charging-pile" size="28px" style="color: #fff;" />
+            </view>
+            <text class="font12 mt5">空闲</text>
+          </view>
+          <view class="flex1 flex_c_n">
+            <view>
+              <text class="font16 bold">#1 直流快充</text>
+              <text class="font14">(5263567487)</text>
+            </view>
+            <view class="font14 mt5">
+              <text>30kw</text>
+              <text>705v</text>
+              <text>国标2015</text>
+            </view>
+            <view class="font14">
+              <text>车位号:</text>
+              <text>B2层C301</text>
+            </view>
+          </view>
+        </view>
+        <van-divider />
+      </block>
+      <view class="flex_c font14 bold">
+        查看全部 >
+      </view>
+
+    </view>
+    <!-- body-station-info -->
+    <view class="card_round_nopad font14 mt10">
+      <text class="bold" style="padding-left: 15px;">停车费</text>
+      <van-divider />
+      <view style="padding:0 15px">前2小时免费，超过以现场收费标准为准。（充电前请确认页面输入车牌是否准确）</view>
+    </view>
+    <view class="card_round_nopad font14 mt10">
+      <view class="flex_r_s" style="padding:0 15px;">
+        <text class="bold">站点信息</text>
+        <text class="flex1"></text>
+        <text> 问题反馈</text>
+      </view>
+      <van-divider />
+      <view style="padding:0 15px">
+        <view class="flex_r_s" style="width: 100%;">
+          <text class="ccc-text " style="width: 100px;">营业时间</text>
+          <text class="flex1"> 周一至周日 00:00～24:00</text>
+        </view>
+        <view class="flex_r_s mt5" style="width: 100%;">
+          <text class="ccc-text " style="width: 100px;">运营商</text>
+          <text class="flex1"> 周一至周日 00:00～24:00</text>
+        </view>
+        <view class="flex_r_s mt5" style="width: 100%;">
+          <text class="ccc-text " style="width: 100px;">客服电话</text>
+          <text class="flex1"> 周一至周日 00:00～24:00</text>
+        </view>
+      </view>
+    </view>
+    <!-- 评论 -->
+    <view class="card_round_nopad font14 mt10">
+      <text class="bold" style="padding-left: 15px;">评论</text>
+      <van-divider />
+      <block wx:for="11" wx:key="*this">
+        <view style="padding:0 15px">
+          <view class="flex_r_s">
+            <image src="/assets/avtor.jpeg" style="width: 40px; height: 40px;border-radius: 50%;"></image>
+            <view class="flex_c_n" style="padding-left: 15px;">
+              <text>尼克</text>
+              <view>
+                <text class="font12" style="color: #666;margin-right: 3px;">2022-03-28 </text>
+                <text class="font12" style="color: #666;margin:0 6px;">|</text>
+                <ui-star num="5"></ui-star>
+              </view>
+            </view>
+          </view>
+          <view class="mt10">
+            充电效率很好，很快就充满了，操作很简单，周围设施便利，体验高超级好
+          </view>
+          <van-divider />
+        </view>
+      </block>
+      <view class="flex_r bold">
+        查看全部 >
+      </view>
+
+    </view>
+  </view>
+  <view class="station-foot">
+    <view class="flex_r_s">
+      <view class="flex_c_n flex1">
+        <view>
+          <text class="price-text">1.500 </text>
+          <text class="font14">元/度</text>
+        </view>
+        <text class="font12">充电费用</text>
+      </view>
+      <button class="btn-primary btn-big flex_r_s">
+        <text class="bold">扫码充电</text>
+        <text class="bold font24" style="padding-left: 15px;"> ></text>
+
+
+      </button>
+    </view>
+
+  </view>
+</view>
