@@ -1,2 +1,31 @@
 <!--pages/order/order.wxml-->
-<text>pages/order/order.wxml</text>
+<view class="container order-container">
+  <van-tabs color="#FF8900" title-active-color="#FF8900" active="{{ active }}" bind:change="onChange">
+    <van-tab title="全部">
+      <view style="padding:20rpx;">
+        <view class="card_round mt20 font14" wx:for="{{3}}" wx:key="index">
+          <view class="flex_r_s">
+            <text style="width: 150rpx;">充电电量</text>
+            <text>30.00度</text>
+            <text class="flex1"></text>
+            <text style="color: #FF8900;" wx:if="{{index==0}}">充电中</text>
+            <text wx:else="{{index==0}}">已完成</text>
+          </view>
+          <view class="flex_r_s mt10">
+            <text style="width: 150rpx;">充电时间</text>
+            <text>65分钟32秒</text>
+            <text class="flex1"></text>
+          </view>
+          <view class="flex_r_s mt20">
+            <text class="ccc-text">2022-03-29 18:00</text>
+            <text class="flex1"></text>
+            <button class="btn-primary btn-radius4" wx:if="{{index==0}}">结束充电</button>
+            <button class="btn-border btn-radius4" wx:else="{{index==0}}">等待评价</button>
+          </view>
+        </view>
+      </view>
+    </van-tab>
+    <van-tab title="待评价">内容 2</van-tab>
+  </van-tabs>
+
+</view>

@@ -1,2 +1,57 @@
 <!--pages/order/detail/detail.wxml-->
-<text>pages/order/detail/detail.wxml</text>
+<view class="container order-detail-container">
+
+  <view class="card_round mt20">
+    <view class="flex_r_s mt10">
+      <view class="flex_c" style="margin-right:15px;">
+        <view class="station-item-icon flex_r">
+          <van-icon class-prefix="iconfont" name="charging-pile" size="28px" style="color: #fff;" />
+        </view>
+        <text class="font12 mt5">已完成</text>
+      </view>
+      <view class="flex1 flex_c_n">
+        <view>
+          <text class="font16 bold">#1 直流快充</text>
+          <text class="font14">(5263567487)</text>
+        </view>
+        <view class="font14 mt5">
+          <text>30kw</text>
+          <text>705v</text>
+          <text>国标2015</text>
+        </view>
+        <view class="font14">
+          <text>车位号:</text>
+          <text>B2层C301</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="card_round font14 mt20">
+    <view class="flex_r_s mt5">
+      <text class="ccc-text">充电电量</text>
+      <text class="flex1"></text>
+      <text>30.00度</text>
+    </view>
+    <view class="flex_r_s mt5">
+      <text class="ccc-text">充电时间</text>
+      <text class="flex1"></text>
+      <text>30.00度</text>
+    </view>
+    <view class="flex_r_s mt5">
+      <text class="ccc-text">充电费用</text>
+      <text class="flex1"></text>
+      <text class="bold">60.00</text>
+      <text>元</text>
+    </view>
+    <van-divider />
+    <view class="flex_r">
+      查看费用明细 >
+    </view>
+
+  </view>
+
+  <button class="btn-primary btn-fillraw mt30">
+    评价
+  </button>
+
+</view>

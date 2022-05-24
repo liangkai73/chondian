@@ -1,1 +1,49 @@
 /* pages/order/using/using.wxss */
+
+.using-container {
+  background: #F6F7F8;
+  padding-top: 100rpx;
+
+  .battery-box {
+    width: 240rpx;
+    height: 360rpx;
+    background: #ececec;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+
+    .text1 {
+      position: absolute;
+      left: 84rpx;
+      top: 120rpx;
+    }
+    .text2 {
+      position: absolute;
+      left: 110rpx;
+      top: 200rpx;
+    }
+  }
+
+  .battery-inner {
+    width: 240rpx;
+    height: 40%;
+    background: #FFD428;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  .using-items {
+    padding: 0;
+    width: 100%;
+
+    .using-item {
+      height: 90rpx;
+    }
+
+    .van-divider {
+      margin: 0 !important;
+    }
+  }
+
+}

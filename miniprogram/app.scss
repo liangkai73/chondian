@@ -4,8 +4,10 @@
 
 .container {
   height: 100vh;
+  min-height: 1200rpx;
   width: 100%;
   background: #fff;
+  box-sizing: border-box;
 }
 
 // flex布局常用类
@@ -299,6 +301,13 @@
   border-radius: 24px !important;
 }
 
+.btn-fillraw {
+  width: 100% !important;
+  padding: 15px !important;
+  border-radius: 8px !important;
+  font-size: 16px !important;
+}
+
 .btn-ccc {
   background: #F5F6F7;
   color: #242E42;
@@ -312,7 +321,26 @@
   &::after {
     border: none !important;
   }
+}
 
+.btn-border {
+  background: #fff;
+  color: #242E42;
+  font-size: 14px;
+  line-height: 20px;
+  border-radius: 16px;
+  padding: 6px 20px;
+  box-sizing: border-box;
+  border: none;
+  border: 1px solid #979797;
+
+  &::after {
+    border: none !important;
+  }
+}
+
+.btn-radius4 {
+  border-radius: 4px !important;
 }
 
 .btn-mark {

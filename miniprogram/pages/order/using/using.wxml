@@ -1,2 +1,47 @@
 <!--pages/order/using/using.wxml-->
-<text>pages/order/using/using.wxml</text>
+<view class="container using-container">
+  <!-- using status -->
+  <view class="using-status flex_c">
+    <view class="battery-box">
+      <view class="battery-inner"></view>
+      <text class="bold text1" style="font-size: 70rpx;">40</text>
+      <text class="text2" style="font-size: 40rpx;">%</text>
+    </view>
+    <text class="font14" style="color: #242A37;">
+      预计还需20分钟充满
+    </text>
+  </view>
+  <!-- list -->
+  <view style="padding: 20rpx;">
+    <!-- list -->
+    <view class="using-items card_round_nopad mt10">
+      <view class="using-item flex_r_s" style="padding: 0 15px;">
+        <text style="color: #333;">充电电量</text>
+        <text class="flex1"></text>
+        <text class="ccc-text">30.00度</text>
+      </view>
+      <van-divider />
+      <view class="using-item flex_r_s" style="padding: 0 15px;">
+        <text style="color: #333;">充电时间</text>
+        <text class="flex1"></text>
+        <text class="ccc-text">65分钟32秒</text>
+      </view>
+      <van-divider />
+      <view class="using-item flex_r_s" style="padding: 0 15px;">
+        <text style="color: #333;">充电费用</text>
+        <text class="flex1"></text>
+        <text class="ccc-text">60.00元</text>
+      </view>
+      <van-divider />
+      <view class="using-item flex_r_s" style="padding: 0 15px;">
+        <text style="color: #333;">充电桩信息</text>
+        <text class="flex1"></text>
+        <van-icon name="arrow" size="20px" style="color: #666666;" />
+      </view>
+    </view>
+
+    <button class="btn-primary btn-fillraw mt30">
+      结束充电
+    </button>
+  </view>
+</view>
