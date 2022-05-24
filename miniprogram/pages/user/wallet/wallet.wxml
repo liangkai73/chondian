@@ -1,2 +1,12 @@
 <!--pages/user/wallet/wallet.wxml-->
-<text>pages/user/wallet/wallet.wxml</text>
+<view class="container wallet-container flex_c">
+
+  <image src="/assets/img-1@3x.png" style="transform: scale(0.8); margin-top: 100rpx;"></image>
+  <text class="mt10">可用余额(元)</text>
+  <text class="bold mt5" style="font-size: 30px;">0.00</text>
+  <button class="btn-primary longbtn" style="margin-top: 80rpx;">充值</button>
+  <button class="btn-ccc longbtn mt20" style="background: #D8D8D8;">提现</button>
+  <text class="flex1"></text>
+  <view class="font14" style="margin-block: 120rpx;">消费明细</view>
+
+</view>

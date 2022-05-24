@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/user/wallet/wallet",
     "pages/user/info/info",
     "pages/user/user",
     "pages/station/equipment/equipment",
@@ -7,7 +8,6 @@
     "pages/station/price/price",
     "pages/map/map",
     "pages/index/index",
-    "pages/user/wallet/wallet",
     "pages/order/order",
     "pages/order/detail/detail",
     "pages/order/using/using",
