@@ -1,5 +1,7 @@
 {
   "pages": [
+    "pages/car/car",
+    "pages/404/error",
     "pages/order/detail/detail",
     "pages/order/using/using",
     "pages/order/order",
@@ -11,8 +13,8 @@
     "pages/station/price/price",
     "pages/map/map",
     "pages/index/index",
-    "pages/car/car",
     "pages/car/add/add"
+   
   ],
   "usingComponents": {
     "van-field": "@vant/weapp/field/index",

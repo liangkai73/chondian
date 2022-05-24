@@ -1,2 +1,24 @@
 <!--pages/car/car.wxml-->
-<text>pages/car/car.wxml</text>
+<view class="container mycar-container">
+  <view class="card_round mt20" wx:for="{{2}}" wx:key="index">
+    <view class="flex_r_s {{index==0?'btn-mark':'btn-mark-ccc'}}" style="width: 110rpx;">
+      <van-icon class-prefix="iconfont" name="checkbox" size="16px" style="color:{{index==0?'#FF8900':'#3C4D56' }};margin-right: 10rpx;" />
+      <text wx:if="{{index==0}}">已认证</text>
+      <text wx:else="{{index==0}}">未认证</text>
+    </view>
+    <view class="flex_r_s mt20" style="padding: 20rpx;">
+      <image src="/assets/car@3x.png" style="width:180rpx;height: 130rpx;"></image>
+      <view class="flex1 flex_c_n" style="margin-left: 60rpx;">
+        <text class="bold">特斯拉 Model X</text>
+        <text class="font14 mt15">闽A 12RT6</text>
+        <button class="btn-primary mt20" style="margin-left:0;width:150rpx">查看</button>
+      </view>
+    </view>
+  </view>
+
+  <view class="mycar-addbox flex_c">
+    <view class="flex_c mycar-addbox-inner">
+      <van-icon class-prefix="iconfont" name="add" size="70rpx" style="color:#000" />
+    </view>
+  </view>
+</view>

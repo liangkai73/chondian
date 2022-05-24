@@ -1,0 +1,9 @@
+<!--pages/404/error.wxml-->
+<view class="container flex_c" style="background: #F6F7F8;padding: 20rpx;">
+
+  <image src="/assets/404 Error@3x.png" style="width:600rpx;height: 600rpx;"></image>
+
+  <button class="btn-primary btn-fillraw" style="margin-top: 200rpx;">返回首页</button>
+
+
+</view>

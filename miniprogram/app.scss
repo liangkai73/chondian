@@ -357,6 +357,21 @@
   }
 }
 
+.btn-mark-ccc {
+  padding: 3px 6px;
+  margin-right: 10px;
+  border: 1px solid #D8D8D8;
+  background: #F5F5F5;
+  color: #3C4D56;
+  border-radius: 12px;
+  font-size: 12px;
+  width: inherit;
+
+  ::after {
+    border: none !important;
+  }
+}
+
 .btn-mark-full {
   padding: 3px 6px;
   margin-right: 10px;
