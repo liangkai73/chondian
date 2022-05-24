@@ -1,13 +1,12 @@
 {
   "pages": [
+    "pages/user/info/info",
+    "pages/user/user",
     "pages/station/equipment/equipment",
     "pages/station/station",
     "pages/station/price/price",
     "pages/map/map",
-    "pages/test/test",
     "pages/index/index",
-    "pages/user/user",
-    "pages/user/info/info",
     "pages/user/wallet/wallet",
     "pages/order/order",
     "pages/order/detail/detail",
@@ -19,12 +18,11 @@
     "van-field": "@vant/weapp/field/index",
     "van-icon": "@vant/weapp/icon/index",
     "van-image": "@vant/weapp/image/index",
-    "van-row": "@vant/weapp/row/index",
-    "van-col": "@vant/weapp/col/index",
     "van-toast": "@vant/weapp/toast/index",
     "van-search": "@vant/weapp/search/index",
     "van-button": "@vant/weapp/button/index",
-    "van-divider": "@vant/weapp/divider/index"
+    "van-divider": "@vant/weapp/divider/index",
+    "van-uploader": "@vant/weapp/uploader/index"
   },
   "window": {
     "backgroundTextStyle": "light",

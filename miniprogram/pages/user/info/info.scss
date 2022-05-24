@@ -1,1 +1,29 @@
 /* pages/user/info/info.wxss */
+
+.userinfo-container {
+  background: #F6F7F8;
+
+  .userinfo-head {
+    height: 440rpx;
+    background: #fff;
+  }
+
+  .uploader-inner {
+    width: 200rpx;
+    height: 200rpx;
+    position: relative;
+  }
+
+  .userinfo-items {
+    background: #fff;
+    padding: 0;
+
+    .userinfo-item {
+      height: 90rpx;
+    }
+
+    .van-divider {
+      margin: 0 !important;
+    }
+  }
+}
