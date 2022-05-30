@@ -194,17 +194,13 @@ index-map1 {
     width: inherit;
   }
 
-  button {
-    height: 40px;
-    border-radius: 20px;
-    font-size: 14px;
-  }
 }
 
 .inner-search {
   position: absolute;
   left: 0;
   top: 30px;
+  z-index: 110;
   width: 100%;
 }
 
@@ -213,7 +209,7 @@ index-map1 {
   background: #F6F7F8;
   box-sizing: border-box;
   overflow: auto;
-  padding: 65px 10px 0 10px;
+  padding: 120rpx 20rpx 60rpx 20rpx;
 }
 
 .popup-inner-item {

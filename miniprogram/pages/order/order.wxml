@@ -19,8 +19,8 @@
           <view class="flex_r_s mt20">
             <text class="ccc-text">2022-03-29 18:00</text>
             <text class="flex1"></text>
-            <button class="btn-primary btn-radius4" wx:if="{{index==0}}">结束充电</button>
-            <button class="btn-border btn-radius4" wx:else="{{index==0}}">等待评价</button>
+            <button class="btn-primary btn-radius4" wx:if="{{index==0}}" bindtap="linkToOver">结束充电</button>
+            <button class="btn-border btn-radius4" wx:else="{{index==0}}" bindtap="linkTode">等待评价</button>
           </view>
         </view>
       </view>

@@ -7,6 +7,17 @@ Page({
   data: {
     active: 0,
   },
+  // linkTo
+  linkToOver() {
+    wx.navigateTo({
+      url: '/pages/order/using/using',
+    })
+  },
+  linkToDetail() {
+    wx.navigateTo({
+      url: '/pages/order/detail/detail',
+    })
+  },
   onChange(event) {
     wx.showToast({
       title: `切换到标签 ${event.detail.name}`,

@@ -1,28 +1,13 @@
-// pages/user/user.ts
+// pages/coupon/coupon.ts
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    active: 0,
+  },
 
-  },
-  // link
-  linkTopMap() {
-    wx.redirectTo({
-      url: "/pages/map/map"
-    })
-  },
-  linkToMycar() {
-    wx.navigateTo({
-      url: "/pages/car/car"
-    })
-  },
-  linkToOrder() {
-    wx.navigateTo({
-      url: "/pages/order/order"
-    })
-  },
   /**
    * 生命周期函数--监听页面加载
    */

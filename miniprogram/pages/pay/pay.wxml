@@ -1,0 +1,100 @@
+<!--pages/pay/pay.wxml-->
+<view class="container pay-container">
+  <!-- head -->
+  <view class="pay-head font14">
+    <view class="flex_r_s ">
+      <text style="width: 150rpx;">充电费用</text>
+      <view class="flex_c_n flex1" style="color: #666;">
+        <view>
+          <text class="font16 bold" style="color: #000;">1.50</text>
+          <text> 元/度</text>
+        </view>
+        <text class="mt10">充满电需要60元，预计时间30分钟</text>
+      </view>
+      <van-icon name="arrow" size="16px" style="color: #000000;margin-left: 50rpx;" />
+    </view>
+
+  </view>
+  <!-- body -->
+  <view class="pay-body">
+    <view class="card_round">
+      <view class="flex_r_s">
+        <view class="flex_c" style="margin-right:25rpx;">
+          <view class="station-item-icon flex_r">
+            <van-icon class-prefix="iconfont" name="charging-pile" size="28px" style="color: #fff;" />
+          </view>
+          <text class="font12 mt10">已插枪</text>
+        </view>
+        <view class="flex1 flex_c_n" style="border-left: 1rpx solid #dcdcdc;padding-left: 25rpx;">
+          <view>
+            <text class="font16 bold">#1 直流快充</text>
+          </view>
+          <text class="font14 mt5">仓山区橘园洲站充电站 ></text>
+          <view class="font14 mt20 flex_r_s">
+            <text style="width: 120rpx;color: #666;">终端编号</text>
+            <text>123456789123456789</text>
+          </view>
+          <view class="font14 mt5 flex_r_s">
+            <text style="width: 120rpx;color: #666;">设备编号</text>
+            <text>30kw</text>
+            <text>705v</text>
+            <text>国标2015</text>
+          </view>
+          <view class="font14 mt5 flex_r_s">
+            <text style="width: 120rpx;color: #666;">车位号</text>
+            <text>B2层C301</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="card_round  mt10 flex_r_s">
+      <text style="color: #333;">定时充电</text>
+      <text class="flex1"></text>
+      <van-switch checked="{{ checked }}" active-color="#FFD428" size="26" inactive-color="#e9e9e9" bind:change="onChange" />
+    </view>
+
+  </view>
+  <!-- foot -->
+  <view class="pay-foot">
+    <view class="flex_r_s">
+      <view class="flex_c_n flex1">
+        <view>
+          <text class="price-text">1.500 </text>
+          <text class="font14">元</text>
+        </view>
+        <text class="font12">充电费用</text>
+      </view>
+      <button class="btn-primary btn-big flex_r_s" bindtap="payhandle">
+        <text class="bold">启动充电</text>
+        <text class="bold font24" style="padding-left: 15px;"> ></text>
+      </button>
+    </view>
+
+  </view>
+  <!-- popup date -->
+  <van-popup show="{{ show }}" round position="bottom" custom-style="height: 60%" bind:close="closePopup">
+    <van-datetime-picker type="time" value="{{ currentDate }}" min-hour="{{ minHour }}" max-hour="{{ maxHour }}" bind:input="onInput" />
+  </van-popup>
+  <!-- popup pay -->
+  <van-popup show="{{ show2 }}" round closeable position="bottom" custom-style="height: 60%" bind:close="closePopup2">
+    <view class="flex_r mt15">
+      支付方式
+    </view>
+    <van-divider />
+    <view class="flex_c" style="padding:20rpx">
+      <view style="margin-top:18rpx">
+        <text class="bold" style="font-size: 40rpx;">60.00</text>
+        <text> 元</text>
+      </view>
+      <button class="btn-primary btn-fillraw mt20">
+        可用余额不足(￥0.00)
+      </button>
+      <button class="btn-primary btn-fillraw mt20" style="background: #03C75A;color: #fff;">
+        微信支付
+      </button>
+      <button class="btn-primary btn-fillraw mt20" style="background: #1BAAF5;color: #fff;">
+        支付宝支付
+      </button>
+    </view>
+  </van-popup>
+</view>

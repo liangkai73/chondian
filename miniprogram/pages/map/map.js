@@ -16,8 +16,24 @@ let markers = [{
   },
   {
     id: 2,
-    latitude: 26.15161,
+    latitude: 26.12161,
     longitude: 119.13399,
+    iconPath: '/assets/marker_down.png',
+    height: 30,
+    width: 8,
+    fast: 10,
+    low: 7,
+    customCallout: {
+      anchorY: 0,
+      anchorX: 0,
+      display: 'ALWAYS'
+
+    }
+  },
+  {
+    id: 3,
+    latitude: 26.10161,
+    longitude: 119.10399,
     iconPath: '/assets/marker_down.png',
     height: 30,
     width: 8,
@@ -42,10 +58,11 @@ Page({
     longitude: 1,
     markers: [],
     activeMarkerId: NaN,
+    current: 0,
     pageType: 1, // 1 foot 2 swiper 
     stationList: [],
     toolsHeight: "100px",
-    popupShow: true,
+    popupShow: false,
     filterMarkerStr: '',
 
   },
@@ -91,6 +108,7 @@ Page({
   getStationList() {
     let list = [{
         id: 1,
+        current: 0,
         name: '仓山区橘园洲站充电站',
         desc: '福建省福州市仓山区红网路',
         distance: '500米',
@@ -101,6 +119,7 @@ Page({
       },
       {
         id: 2,
+        current: 1,
         name: '仓山区橘园洲站充电站',
         desc: '福建省福州市仓山区红网路',
         distance: '500米',
@@ -111,6 +130,7 @@ Page({
       },
       {
         id: 3,
+        current: 2,
         name: '仓山区橘园洲站充电站',
         desc: '福建省福州市仓山区红网路',
         distance: '500米',
@@ -124,15 +144,27 @@ Page({
       stationList: list
     })
   },
+  // 点击地域
+  tapMap() {
+    this.setData({
+      pageType: 1
+    })
+  },
   // 选择地点
   choseTap(e) {
-    console.log(e)
+    let id = e.markerId;
+
+    let node = this.data.stationList.filter((e) => {
+      return e.id == id
+    })[0]
     this.setData({
-      activeMarkerId: e.markerId,
+      activeMarkerId: id,
       pageType: 2,
-      toolsHeight: "300px"
+      toolsHeight: "300px",
+      current: node.current
     })
-    console.log
+
+
   },
   // 切换地点swiper
   changeSwiper(e, s) {
@@ -151,16 +183,46 @@ Page({
 
   },
   // 打开弹出层
-  openPopup() {
+  // 弹出search popup
+  showMarkerPopup() {
     this.setData({
       popupShow: true
-    });
+    })
   },
   // 关闭弹出层
   onClosePopup() {
     this.setData({
       popupShow: false
     });
+  },
+  linkToUser() {
+    wx.redirectTo({
+      url: '/pages/user/user'
+    })
+  },
+  // 跳转到电站详情页
+  linkToStation() {
+    wx.navigateTo({
+      url: '/pages/station/station',
+    })
+  },
+
+  // 扫一扫
+  getscanCode() {
+    wx.scanCode({
+      success(res) {
+        console.log(res)
+      }
+    })
+  },
+  // 拉起app导航
+  getMapApp() {
+    let mpCtx = wx.createMapContext('map1')
+    mpCtx.openMapApp({
+      latitude: 26.15061,
+      longitude: 119.13199,
+      destination: "闽侯县政府",
+    })
   },
 
   /**

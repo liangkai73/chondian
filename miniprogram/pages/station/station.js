@@ -45,6 +45,18 @@ Page({
       duration: e.detail.value
     })
   },
+  // linkTo
+  linkToPrice() {
+    wx.navigateTo({
+      url: '/pages/station/price/price',
+    })
+  },
+  linkToEquipment() {
+    wx.navigateTo({
+      url: '/pages/station/equipment/equipment',
+    })
+
+  },
   /**
    * 生命周期函数--监听页面加载
    */

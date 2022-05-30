@@ -9,25 +9,25 @@
     <text class="flex1"></text>
     <view class="user-wallet-box flex_r_c">
       <van-icon class-prefix="iconfont" name="wallet" size="24px" style="color: #000;" />
-      <text style="margin-left:10px" class="font14">钱包</text>
+      <text style="margin-left:18rpx" class="font14">钱包</text>
     </view>
   </view>
   <!-- inner -->
   <view class="user-inner" style="padding: 20rpx;">
     <view class="card_round flex_r_s font14">
-      <view class="flex_c" style="margin-left:10rpx">
+      <view class="flex_c" style="margin-left:10rpx" bindtap="linkToOrder">
         <van-icon class-prefix="iconfont" name="order" size="24px" style="color: #000;" />
         <text class="mt10">订单信息</text>
       </view>
       <text class="flex1"></text>
-      <view class="flex_c">
+      <view class="flex_c" bindtap="linkToMycar">
         <van-icon class-prefix="iconfont" name="car" size="24px" style="color: #000;" />
-        <text class="mt10">订单信息</text>
+        <text class="mt10">我的车</text>
       </view>
       <text class="flex1"></text>
       <view class="flex_c" style="margin-right:10rpx">
         <van-icon class-prefix="iconfont" name="help" size="24px" style="color: #000;" />
-        <text class="mt10">订单信息</text>
+        <text class="mt10">帮助与反馈</text>
       </view>
 
     </view>
@@ -76,9 +76,9 @@
   <!-- foot -->
   <view class="foot-bar ">
     <view class="flex_r_s mt10">
-      <view class="active-font">首页</view>
+      <view bindtap="linkTopMap">首页</view>
       <button class="button-y">扫码充电</button>
-      <view>我的</view>
+      <view class="active-font">我的</view>
     </view>
   </view>
 </view>

@@ -38,7 +38,7 @@
         <text>元/度</text>
         <text class="btn-mark-full" style="margin-left: 5px;">当前段</text>
         <text class="flex1"></text>
-        <text>价格详情 ></text>
+        <text bindtap="linkToPrice">价格详情 ></text>
 
       </view>
       <van-divider />
@@ -75,7 +75,7 @@
         </view>
         <van-divider />
       </block>
-      <view class="flex_c font14 bold">
+      <view class="flex_c font14 bold" bindtap="linkToEquipment">
         查看全部 >
       </view>
 

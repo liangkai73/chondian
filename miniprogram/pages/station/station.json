@@ -1,5 +1,6 @@
 {
   "usingComponents": {
     "ui-star": "/components/star/star"
-  }
+  },
+  "navigationBarTitleText": "电站详情"
 }

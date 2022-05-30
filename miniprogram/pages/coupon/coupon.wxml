@@ -1,0 +1,62 @@
+<!--pages/coupon/coupon.wxml-->
+<view class="container coupon-container">
+  <van-tabs color="#FF8900" title-active-color="#FF8900" active="{{ active }}" bind:change="onChange">
+    <van-tab title="待使用">
+      <view class="coupon-inner">
+        <view class="card_round flex_r_s">
+          <view class="flex_c_n" style="padding-left: 10rpx;margin-bottom: 10rpx;">
+            <text class="font14 bold">优惠券名称</text>
+            <text class="font12 ccc-text mt5">2022-05-05到期</text>
+            <text class="font12 ccc-text mt5">使用规则 ></text>
+          </view>
+          <view class="flex1"></view>
+          <view class="flex_c" style="width: 150rpx;">
+            <view style="color:#F24943">
+              <text>￥</text>
+              <text class="bold" style="font-size: 46rpx;">20</text>
+            </view>
+            <button class="btn-primary mt5"> 去使用</button>
+          </view>
+        </view>
+      </view>
+    </van-tab>
+    <van-tab title="已使用">
+      <view class="coupon-inner">
+        <view class="card_round flex_r_s" style="opacity: 0.5;">
+          <view class="flex_c_n" style="padding-left: 10rpx;margin-bottom: 10rpx;">
+            <text class="font14 bold">优惠券名称</text>
+            <text class="font12 ccc-text mt5">2022-05-05到期</text>
+            <text class="font12 ccc-text mt5">使用规则 ></text>
+          </view>
+          <view class="flex1"></view>
+          <view class="flex_c" style="width: 150rpx;">
+            <view style="color:#F24943">
+              <text>￥</text>
+              <text class="bold" style="font-size: 46rpx;">20</text>
+            </view>
+            <button class="btn-primary mt5" disabled="true"> 已使用</button>
+          </view>
+        </view>
+      </view>
+    </van-tab>
+    <van-tab title="已过期">
+      <view class="coupon-inner">
+        <view class="card_round flex_r_s" style="opacity: 0.5;">
+          <view class="flex_c_n" style="padding-left: 10rpx;margin-bottom: 10rpx;">
+            <text class="font14 bold">优惠券名称</text>
+            <text class="font12 ccc-text mt5">2022-05-05到期</text>
+            <text class="font12 ccc-text mt5">使用规则 ></text>
+          </view>
+          <view class="flex1"></view>
+          <view class="flex_c" style="width: 150rpx;">
+            <view style="color:#F24943">
+              <text>￥</text>
+              <text class="bold" style="font-size: 46rpx;">20</text>
+            </view>
+            <button class="btn-primary mt5" disabled="true"> 已过期</button>
+          </view>
+        </view>
+      </view>
+    </van-tab>
+  </van-tabs>
+</view>

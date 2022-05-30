@@ -1,26 +1,51 @@
-// pages/user/user.ts
+// pages/pay/pay.ts
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    checked: false,
+    show: false,
+    show2: false,
+    currentDate: '12:00',
+    minHour: 10,
+    maxHour: 20,
+  },
 
+
+  onChange({
+    detail
+  }) {
+    // 需要手动对 checked 状态进行更新
+    this.setData({
+      checked: detail
+    });
+    if (detail) {
+      this.setData({
+        show: true
+      });
+    }
   },
-  // link
-  linkTopMap() {
-    wx.redirectTo({
-      url: "/pages/map/map"
-    })
+  closePopup() {
+    this.setData({
+      show: false
+    });
   },
-  linkToMycar() {
-    wx.navigateTo({
-      url: "/pages/car/car"
-    })
+  closePopup2() {
+    this.setData({
+      show2: false
+    });
   },
-  linkToOrder() {
-    wx.navigateTo({
-      url: "/pages/order/order"
+  onInput(event) {
+    this.setData({
+      currentDate: event.detail,
+    });
+  },
+  payhandle() {
+    console.log(222)
+    this.setData({
+      show2: true
     })
   },
   /**
