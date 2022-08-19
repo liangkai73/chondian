@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/coupon/coupon",
     "pages/map/map",
+    "pages/user/info/info",
+    "pages/coupon/coupon",
     "pages/user/wallet/wallet",
     "pages/user/user",
     "pages/pay/pay",
@@ -11,10 +12,8 @@
     "pages/order/detail/detail",
     "pages/order/using/using",
     "pages/order/order",
-    "pages/user/info/info",
     "pages/station/equipment/equipment",
     "pages/station/price/price",
-    "pages/index/index",
     "pages/car/add/add"
     
   ],
@@ -49,7 +48,8 @@
     "chooseLocation": {
       "version": "1.0.9",
       "provider": "wx76a9a06e5b4e693e"
-    },
+    }
+    ,
     "routePlan": {
       "version": "1.0.19",
       "provider": "wx50b5593e81dd937a"

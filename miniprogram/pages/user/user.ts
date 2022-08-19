@@ -23,11 +23,31 @@ Page({
       url: "/pages/order/order"
     })
   },
+  linkToUserInfo() {
+    wx.navigateTo({
+      url: "/pages/user/info/info"
+    })
+  },
+  linkToWallet() {
+    wx.navigateTo({
+      url: "/pages/user/wallet/wallet"
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad() {
-
+    wx.showModal({
+      title: '登录申请',
+      content: '点击确定用当前手机号码登录',
+      success(res) {
+        if (res.confirm) {
+          console.log('用户点击确定')
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
+    })
   },
 
   /**

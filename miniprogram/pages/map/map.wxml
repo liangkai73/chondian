@@ -6,7 +6,7 @@
         <cover-view marker-id="{{item.id}}" class="callout-inner {{item.id==activeMarkerId&&'callout-active'}}">
           <cover-view class="flex_r_s marker-box">
             <cover-image class="marker-box-icon" src="/assets/charge-fast.png"></cover-image>
-            <cover-view class="marker-box-inner"> 快{{item.fast}}/慢{{item.low}}</cover-view>
+            <cover-view class="marker-box-inner"> 快{{item.fastFree}}/慢{{item.slowFree}}</cover-view>
           </cover-view>
           <cover-view class="marker-node"></cover-view>
         </cover-view>
@@ -43,29 +43,30 @@
                 <view class="flex1 flex_c_n" style="padding-left: 5px;height: 100px">
                   <view class="flex_r_s flex1">
                     <view class="flex1 flex_c_n" style="height: 100%;">
-                      <text class="t-name">仓山区橘园洲充电桩{{current}}</text>
+                      <text class="t-name">{{item.electricName}}</text>
                       <view class="flex1"></view>
-                      <text class="t-desc">福建省福州市区洪武路</text>
+                      <text class="t-desc">{{item.address}}</text>
                     </view>
                     <van-icon name="arrow" size="20px" style="color: #666666;" bindtap="linkToStation" />
                   </view>
-                  <text style="font-size: 12px;">500米</text>
+                  <text style="font-size: 12px;">距离:{{item.staionDistance}}</text>
                   <view class="price-box flex_r_s">
-                    <text class="price-text">1.50</text>
+                    <text class="price-text">{{item.price && item.price > 0 ? item.price
+                      :'--.--'}}</text>
                     <text>元/度</text>
                     <text class="flex1"></text>
                     <view class="price-right flex_r_s">
                       <image src="/assets/charge-fast.png"></image>
-                      快20/慢10
+                      快{{item.fastFree}}/慢{{item.slowFree}}
                     </view>
                   </view>
                 </view>
               </view>
               <view class="inner-marks flex_r_s">
-                <view class="mark-t flex_r">限时免费停车</view>
+                <view class="mark-t flex_r" wx:for="{{item.tags}}" wx:for-item="node">{{node.tagName}}</view>
               </view>
               <view class="inner-botton flex_r_c">
-                <button class="btn-ccc" bindtap="getMapApp">导航</button>
+                <button class="btn-ccc" bindtap="toThirdPartyMap" data-markerId="{{item.id}}">导航</button>
                 <view style="width: 10px;"></view>
                 <button class="btn-primary" style="background: #FFD428;">扫码充电</button>
               </view>
@@ -83,36 +84,37 @@
         <text>推荐</text>
         <text class="flex1"></text>
       </view>
-      <view class="popup-inner-item mt10" data-markerId="{{item.id}}" wx:for="{{stationList}}" wx:key="*this">
+      <view class="popup-inner-item mt10" data-markerId="{{item.id}}" wx:for="{{stationList}}" wx:key="index">
         <view class="swiper-box-inner flex_c_n">
           <view class="inner-body flex_r_s flex1">
             <image src="/assets/images-2.png"></image>
             <view class="flex1 flex_c_n" style="padding-left: 5px;height: 100px">
               <view class="flex_r_s flex1">
                 <view class="flex1 flex_c_n" style="height: 100%;">
-                  <text class="t-name">仓山区橘园洲充电桩</text>
+                  <text class="t-name">{{item.electricName}}</text>
                   <view class="flex1"></view>
-                  <text class="t-desc">福建省福州市区洪武路</text>
+                  <text class="t-desc">{{item.address}}</text>
                 </view>
                 <van-icon name="arrow" size="20px" style="color: #666666;" bindtap="linkToStation" />
               </view>
-              <text style="font-size: 12px;">500米</text>
+              <text style="font-size: 12px;">距离:{{item.staionDistance}}</text>
               <view class="price-box flex_r_s">
-                <text class="price-text">1.50</text>
+                <text class="price-text">{{item.price && item.price > 0 ? item.price
+                  :'--.--'}}</text>
                 <text>元/度</text>
                 <text class="flex1"></text>
                 <view class="price-right flex_r_s">
                   <image src="/assets/charge-fast.png"></image>
-                  快20/慢10
+                  快{{item.fastFree}}/慢{{item.slowFree}}
                 </view>
               </view>
             </view>
           </view>
           <view class="inner-marks flex_r_s">
-            <view class="mark-t flex_r">限时免费停车</view>
+            <view class="mark-t flex_r" wx:for="{{item.tags}}" wx:for-item="node">{{node.tagName}}</view>
           </view>
           <view class="inner-botton flex_r_c">
-            <button class="btn-ccc">导航</button>
+            <button class="btn-ccc" bindtap="toThirdPartyMap" data-markerId="{{item.id}}">导航</button>
             <view style="width: 10px;"></view>
             <button class="btn-primary" style="background: #FFD428;">扫码充电</button>
           </view>

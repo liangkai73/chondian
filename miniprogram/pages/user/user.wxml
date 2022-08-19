@@ -2,12 +2,15 @@
 <view class="container user-container">
   <!-- head -->
   <view class="user-head flex_r_s">
-    <image src="/assets/avtor.jpeg" style="width: 60px; height: 60px;border-radius: 50%;margin-right: 30rpx;"></image>
-    <text wx:if="{{false}}" class="font18 bold">授权登录</text>
-    <text wx:else="{{false}}" class="font18 bold">黄一</text>
+    <view class="flex_r_s" bindtap="linkToUserInfo">
+      <image src="/assets/avtor.jpeg" style="width: 60px; height: 60px;border-radius: 50%;margin-right: 30rpx;"></image>
+      <text wx:if="{{false}}" class="font18 bold">授权登录</text>
+      <text wx:else="{{false}}" class="font18 bold">黄一</text>
+    </view>
+
     <van-icon class-prefix="iconfont" name="checkbox" size="20px" style="color: #FFD428;margin-left: 10px;" />
     <text class="flex1"></text>
-    <view class="user-wallet-box flex_r_c">
+    <view class="user-wallet-box flex_r_c" bindtap="linkToWallet">
       <van-icon class-prefix="iconfont" name="wallet" size="24px" style="color: #000;" />
       <text style="margin-left:18rpx" class="font14">钱包</text>
     </view>
